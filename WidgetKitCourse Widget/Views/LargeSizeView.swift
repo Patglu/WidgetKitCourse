@@ -18,18 +18,18 @@ struct LargeSizeView: View {
             .clipped() // Applies the shadow to only the hstack and not the sub view
             .shadow(color: .blue.opacity(0.5), radius: 10, x: 1, y: 2)
             
-            ForEach(0..<5, id: \.self) { _ in
-                Link(destination: URL(string: "myapp://todo/1")!) {
+            ForEach(entry.todos) { todo in
+                Link(destination: URL(string: "myapp://todo/\(todo.id)")!) {
                     HStack{
                         Circle()
                             .stroke(lineWidth: 2)
                             .frame(width: 30, height: 30)
                             .overlay {
-                                if true {
+                                if todo.completed {
                                     Image(systemName: "checkmark")
                                 }
                             }
-                        Text("Todo title")
+                        Text(todo.title)
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -44,7 +44,7 @@ struct LargeSizeView: View {
 
 struct LargeSizeView_Widget_Previews: PreviewProvider {
     static var previews: some View {
-        LargeSizeView(entry: SimpleEntry(date: Date()))
+        LargeSizeView(entry: SimpleEntry(date: Date(), todos: [.placeholder(0)]))
             .previewContext(WidgetPreviewContext(family: .systemLarge))
         
     }

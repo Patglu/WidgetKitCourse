@@ -16,7 +16,7 @@ struct Todo: Decodable, Identifiable {
 
 extension Todo{
     //MARK: - For previews
-    func placeHolder(_ id: Int) -> Todo{
-        
+    static func placeholder(_ id: Int) -> Todo{
+        Todo(userId: 0, id: id, title: "Placeholder", completed: .random())
     }
 }

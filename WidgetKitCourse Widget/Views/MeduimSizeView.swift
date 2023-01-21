@@ -1,4 +1,3 @@
-
 import WidgetKit
 import SwiftUI
 
@@ -15,12 +14,14 @@ struct MeduimSizeView: View {
                 
                 Divider()
                 
-                VStack(alignment: .leading){
-                    Text("Todo title")
-                        .font(.headline)
-                    
-                    Text("Completed")
-                        .font(.subheadline)
+                if let todo = entry.todos.first {
+                    VStack(alignment: .leading){
+                        Text(todo.title)
+                            .font(.headline)
+                        
+                        Text(todo.completed ? "Completed" : "Open")
+                            .font(.subheadline)
+                    }
                 }
                 Spacer()
             }
@@ -28,13 +29,13 @@ struct MeduimSizeView: View {
         } label: {
             Label("My Todos", image: "list.dash")
         }
-        .widgetURL(URL(string: "myapp://todo/1"))
+        .widgetURL(URL(string: "myapp://todo/\(entry.todos.first?.id ?? 0)"))
     }
 }
 
 struct MeduimSizeView_Widget_Previews: PreviewProvider {
     static var previews: some View {
-        MeduimSizeView(entry: SimpleEntry(date: Date()))
+        MeduimSizeView(entry: SimpleEntry(date: Date(), todos: [.placeholder(0)]))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
         
     }
