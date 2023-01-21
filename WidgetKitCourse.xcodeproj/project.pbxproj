@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		433055B8297C0F0C00A5322F /* LargeSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433055B7297C0F0C00A5322F /* LargeSizeView.swift */; };
+		433055BA297C0F1900A5322F /* MeduimSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433055B9297C0F1900A5322F /* MeduimSizeView.swift */; };
+		433055BB297C1E3100A5322F /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B182757926700435678 /* TodoService.swift */; };
+		433055BC297C1E3B00A5322F /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B162757923A00435678 /* Todo.swift */; };
 		5C658B0727578E1900435678 /* WidgetKitCourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B0627578E1900435678 /* WidgetKitCourseApp.swift */; };
 		5C658B0927578E1900435678 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B0827578E1900435678 /* ContentView.swift */; };
 		5C658B0B27578E1A00435678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C658B0A27578E1A00435678 /* Assets.xcassets */; };
@@ -17,7 +21,7 @@
 		5CA9F7BC275E56D600EAA6D2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA9F7BB275E56D600EAA6D2 /* SwiftUI.framework */; };
 		5CA9F7BF275E56D600EAA6D2 /* WidgetKitCourse_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9F7BE275E56D600EAA6D2 /* WidgetKitCourse_Widget.swift */; };
 		5CA9F7C1275E56D700EAA6D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA9F7C0275E56D700EAA6D2 /* Assets.xcassets */; };
-		5CA9F7C5275E56D700EAA6D2 /* WidgetKitCourse WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5CA9F7B7275E56D600EAA6D2 /* WidgetKitCourse WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5CA9F7C5275E56D700EAA6D2 /* WidgetKitCourse WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5CA9F7B7275E56D600EAA6D2 /* WidgetKitCourse WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5CA9F7CB275E586200EAA6D2 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9F7CA275E586200EAA6D2 /* Provider.swift */; };
 		5CA9F7CD275E588B00EAA6D2 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9F7CC275E588B00EAA6D2 /* SimpleEntry.swift */; };
 		5CA9F7CF275E58A100EAA6D2 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9F7CE275E58A100EAA6D2 /* WidgetView.swift */; };
@@ -34,20 +38,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5CA9F7C6275E56D700EAA6D2 /* Embed App Extensions */ = {
+		5CA9F7C6275E56D700EAA6D2 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5CA9F7C5275E56D700EAA6D2 /* WidgetKitCourse WidgetExtension.appex in Embed App Extensions */,
+				5CA9F7C5275E56D700EAA6D2 /* WidgetKitCourse WidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		433055B7297C0F0C00A5322F /* LargeSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSizeView.swift; sourceTree = "<group>"; };
+		433055B9297C0F1900A5322F /* MeduimSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeduimSizeView.swift; sourceTree = "<group>"; };
 		5C658B0327578E1900435678 /* WidgetKitCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetKitCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C658B0627578E1900435678 /* WidgetKitCourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKitCourseApp.swift; sourceTree = "<group>"; };
 		5C658B0827578E1900435678 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		433055B6297C0EF200A5322F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CA9F7CE275E58A100EAA6D2 /* WidgetView.swift */,
+				433055B7297C0F0C00A5322F /* LargeSizeView.swift */,
+				433055B9297C0F1900A5322F /* MeduimSizeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5C658AFA27578E1900435678 = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +170,8 @@
 		5CA9F7BD275E56D600EAA6D2 /* WidgetKitCourse Widget */ = {
 			isa = PBXGroup;
 			children = (
+				433055B6297C0EF200A5322F /* Views */,
 				5CA9F7BE275E56D600EAA6D2 /* WidgetKitCourse_Widget.swift */,
-				5CA9F7CE275E58A100EAA6D2 /* WidgetView.swift */,
 				5CA9F7C0275E56D700EAA6D2 /* Assets.xcassets */,
 				5CA9F7C2275E56D700EAA6D2 /* Info.plist */,
 				5CA9F7CA275E586200EAA6D2 /* Provider.swift */,
@@ -174,7 +190,7 @@
 				5C658AFF27578E1900435678 /* Sources */,
 				5C658B0027578E1900435678 /* Frameworks */,
 				5C658B0127578E1900435678 /* Resources */,
-				5CA9F7C6275E56D700EAA6D2 /* Embed App Extensions */,
+				5CA9F7C6275E56D700EAA6D2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -211,7 +227,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					5C658B0227578E1900435678 = {
 						CreatedOnToolsVersion = 13.1;
@@ -276,8 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433055B8297C0F0C00A5322F /* LargeSizeView.swift in Sources */,
 				5CA9F7CD275E588B00EAA6D2 /* SimpleEntry.swift in Sources */,
+				433055BA297C0F1900A5322F /* MeduimSizeView.swift in Sources */,
+				433055BC297C1E3B00A5322F /* Todo.swift in Sources */,
 				5CA9F7CB275E586200EAA6D2 /* Provider.swift in Sources */,
+				433055BB297C1E3100A5322F /* TodoService.swift in Sources */,
 				5CA9F7CF275E58A100EAA6D2 /* WidgetView.swift in Sources */,
 				5CA9F7BF275E56D600EAA6D2 /* WidgetKitCourse_Widget.swift in Sources */,
 			);
@@ -345,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -400,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

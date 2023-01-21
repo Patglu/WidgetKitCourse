@@ -13,3 +13,10 @@ struct Todo: Decodable, Identifiable {
     let title: String
     let completed: Bool
 }
+
+extension Todo{
+    //MARK: - For previews
+    func placeHolder(_ id: Int) -> Todo{
+        
+    }
+}

@@ -43,6 +43,28 @@ struct ContentView: View {
                 }
                 .padding()
             }
+            .onOpenURL { url in
+                //MARK: - Called when opened through the widget
+                guard
+                    url.scheme == "myapp",
+                    url.host == "todo",
+                        let id = Int(url.pathComponents[1])
+                else {
+                    print("Widget URL Error")
+                    return
+                }
+                
+                Task{
+                    do{
+                        let todo = try await TodoService.shared.getTodo(with: id)
+                        DispatchQueue.main.async {
+                            selectedTodo = todo
+                        }
+                    } catch{
+                        print(error.localizedDescription)
+                    }
+                }
+            }
         }
     }
 }

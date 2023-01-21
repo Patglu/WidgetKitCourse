@@ -1,9 +1,4 @@
-//
-//  WidgetKitCourse_Widget.swift
-//  WidgetKitCourse Widget
-//
-//  Created by Florian Schweizer on 06.12.21.
-//
+
 
 import WidgetKit
 import SwiftUI
@@ -16,8 +11,9 @@ struct WidgetKitCourse_Widget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .supportedFamilies([.systemMedium,.systemLarge])
+        .configurationDisplayName("My Todos")
+        .description("View your latest todos")
     }
 }
 
@@ -25,5 +21,6 @@ struct WidgetKitCourse_Widget_Previews: PreviewProvider {
     static var previews: some View {
         WidgetView(entry: SimpleEntry(date: Date()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
     }
 }
